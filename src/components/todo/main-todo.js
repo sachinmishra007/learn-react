@@ -11,7 +11,7 @@ const MainTodo = () => {
         display: false,
         message: ''
     });
-
+   
     const [todoList, setTodoList] = useState([]);
 
     const onOperation = (event, operation) => {
