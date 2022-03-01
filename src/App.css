@@ -1,0 +1,196 @@
+
+.control{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.container{
+    /* width: 100%; */
+    /* height: auto; */
+    background-color: #d9d6dc;
+    padding: 10px;
+    /* margin: 50%; */
+    margin: auto;    
+    width: 60%;
+    border-radius: 5px;
+}
+
+.seprator{
+  border-top-style: solid;
+  border-top-width: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top-color: #81589f;
+}
+.btnCls{
+  display: flex;
+  justify-content: end;  
+}
+.button{
+  width: 20%;
+  height: 28px;
+  background: #81589f;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 27px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+label,input{
+  font-size: 12px;
+  outline: none;
+}
+
+.labelCls{
+  width: 30%;
+}
+.inputCls{
+  height: 25px;
+  border-style: none;
+  border-radius: 5px;
+  width: 70%;
+}
+
+.msgBox{  
+  padding: 10px;    
+  margin: auto;    
+  width: 60%;
+  border-radius: 5px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.green{
+  background-color: #bb9509;
+}
+
+.red{
+  background-color: rgba(255, 0, 0, 0.959);
+}
+.msgTitle{
+  font-size: 12px;
+  color: #dcfffc;
+  font-weight: 500;
+}
+.msgClose{
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.main-container{
+  overflow: hidden;
+  height: 100vh;
+  /* background-color: #dcfffc; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addition{
+  margin-top:10%;
+  /* background-color: red; */
+  width: 50%;
+  
+}
+
+.todo{  
+  padding-top: 10%;  
+    /* background-color: yellow; */
+    width: 50%;
+    border-left-color: #7cda16;
+    border-left-style: dashed;
+    border-left-width: 1px;
+}
+
+.title{
+  text-align: center;
+  color: #cfe4b9;
+  margin-bottom: 30px;
+}
+
+.todo-input{
+  margin: auto;
+  width: 60%;
+  justify-content: space-between;
+  display: flex;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+
+.todo-input .button{
+    height: 31px;
+
+}
+
+.todo-input .input{
+  width: 100%;
+  border-style: none;
+  background-color: #33334d;  
+  color: white;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.todo-list{
+  margin: auto;
+  width: 60%;
+  color: white;
+}
+
+.todo-list ul{
+  list-style: none;
+  margin: 0;
+  padding:0 ;
+  margin-top: 10px;
+  padding-right: 10px;
+  height: 50vh;
+  overflow: auto;
+}
+
+.todo-list ul li{
+  border: 1px #0f9319 solid;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #7d3604;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.todo-list ul li .list-op{
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-list ul li .list-op svg{
+  cursor: pointer;
+}
+
+.todo-list .complete{
+  position: absolute;  
+  width: 75%;
+  height: 1px;
+  background: black;
+  top: 0;
+  left: 0;
+  margin-top: 21px;
+  margin-left: 4px;
+}
+
+.todo-list .item-complete{
+  background-color: green;
+}
+
+.elipse{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
