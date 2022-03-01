@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ master ]  
+    
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+   runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        node-version: [15.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run build
+    - name: Deploy to surge.sh
+      uses: dswistowski/surge-sh-action@v1
+      with:
+        domain: ${{ secrets.surge_domain }}
+        project: 'build/'
+        login: ${{ secrets.surge_login }}
+        token: ${{ secrets.surge_token }}
